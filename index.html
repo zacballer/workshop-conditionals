@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>title</title>
+    <style>
+      .content {
+        margin: 40px;
+        text-align: center;
+      }
+      .box {
+        padding: 10px;
+      }
+      #context {
+        background-color: #FFD;
+        padding: 16px;
+        text-align: left;
+      }
+      #situation {
+        margin: 20px 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <div id="context" class="box">
+        You've been hired by USC to program your own autonomus vehicle, which we call auto car for short.
+        The more conditionals, the smarter your auto car can become.
+        How many conditionals can you add?
+      </div>
+      <div id="situation" class="box">your auto car is driving down the road, when suddenly it sees a </div>
+      <div id="text-box" class="box"><input id="situation-input" type="text" /></div>
+      <div id="btn-react" class="btn btn-primary">React</div>
+      <div id="result" class="box"></div>
+    </div>
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+   function autorun()
+   {
+     var $situation = $("#situation")
+       , $textbox = $("#situation-input")
+       , $btnreact = $("#btn-react")
+       , $result = $("#result")
+
+     $btnreact.on("click", function() {
+       var given = $textbox.val()
+
+       if (given == "stop sign") {
+         return $result.html("auto car comes to a safe and complete stop")
+       }
+
+       if (given == "[situation here]") {
+         return $result.html("[result here]")
+       }
+
+       if (given == "[situation here]") {
+         return $result.html("[result here]")
+       }
+
+       if (given == "[situation here]") {
+         return $result.html("[result here]")
+       }
+
+       $result.html("auto car does not know how to handle this situation")
+     })
+
+   }
+   if (document.addEventListener) document.addEventListener("DOMContentLoaded", autorun, false);
+   else if (document.attachEvent) document.attachEvent("onreadystatechange", autorun);
+   else window.onload = autorun;
+  </script>
+  </body>
+</html>
