@@ -48,17 +48,17 @@
        , $result = $("#result")
 
      $btnreact.on("click", function() {
-       var given = $textbox.val()
+       var input = $textbox.val()
 
-       if (given == "stop sign") {
+       if (input == "stop sign") {
          return $result.html("auto car comes to a safe and complete stop")
        }
 
-       if (given == "person") {
+       if (input == "person") {
          return $result.html("auto car goes around him/her")
        }
 
-       if (given == "flood") {
+       if (input == "flood") {
          return $result.html("auto car turns around")
        }
 
